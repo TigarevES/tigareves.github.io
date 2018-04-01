@@ -87,13 +87,13 @@ body { font-family: 'Ubuntu', Arial, sans-serif; color: #4c4c4c; }
 .content-about { margin-left: 75px; }
 .about-headline { font-size: 1.2rem; border-left: 3px solid #3757a1; padding-left: 1rem; max-width: 350px; font-weight: 500; line-height: 1; }
 .about-description { margin-top: 35px; margin-bottom: 1rem; font-family: 'Gabriela', serif; }
-.about-body>p { font-size: .9rem; color: #949494; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
-.about-adress { font-size: .9rem; color: #949494; }
+.about-body>p { font-size: .9rem; color: #565656; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+.about-adress { font-size: .9rem; color: #565656; }
 .about-more { color: #3757a1; }
 .about-numbers { display: flex; margin-top: 4rem; }
 .number { font-size: 38px; margin: 0; display: block; font-family: 'Gabriela', serif; }
 .numbers-column { margin-right: 75px; }
-.number-text { color: #949494; font-size: .8rem; line-height: 1; display: inline-block; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+.number-text { color: #565656; font-size: .8rem; line-height: 1; display: inline-block; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
 #content-why { margin-top: 50px; }
 #content-why>h2 { font-size: 1.2rem; border-left: 3px solid #3757a1; padding-left: 1rem; max-width: 50px; line-height: 1; font-weight: 500; margin: 50px 0; }
 .content-boxes { display: flex; }
@@ -102,7 +102,7 @@ body { font-family: 'Ubuntu', Arial, sans-serif; color: #4c4c4c; }
 .box-header { position: relative; }
 .box-header>svg { position: absolute; height: 2.5rem; width: 2.5rem; color: rgba(0, 0, 0, .2); }
 .box-header>p { margin-left: 3.5rem; }
-.box-body>p { font-size: .8rem; color: #949494; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+.box-body>p { font-size: .8rem; color: #565656; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
 .content-gallery { display: flex; font-size: 0; }
 .photo-col-right { display: flex; flex-wrap: wrap; }
 .content-gallery img { display: block; }
@@ -111,16 +111,16 @@ body { font-family: 'Ubuntu', Arial, sans-serif; color: #4c4c4c; }
 .offer-headline { font-size: 1.2rem; border-right: 3px solid #3757a1; padding-right: 1rem; max-width: 300px; font-weight: 500; line-height: 1; }
 .offer-value { margin-top: 25px; }
 .price-num { font-size: 38px; margin: 0; display: inline-block; font-weight: 300; font-family: 'Gabriela', serif; }
-.price-text { color: #949494; }
+.price-text { color: #565656; }
 .price-description { display: block; font-size: .8rem; }
 .offer-hot { margin-top: 50px; max-width: 300px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
 .offer-hot span { text-decoration: underline; }
-.offer-hot-author { margin-top: 25px; color: #949494; font-size: .9rem; font-style: italic; }
-.stage-caption { color: #949494; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-size: .8rem; }
+.offer-hot-author { margin-top: 25px; color: #565656; font-size: .9rem; font-style: italic; }
+.stage-caption { color: #565656; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-size: .8rem; }
 .stage-title { font-size: 1.1rem; margin-bottom: .5rem; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold; }
 .stage { border: 3px solid rgba(0, 0, 0, .1); padding: 1rem; border-radius: 4px; margin-bottom: 2rem; }
 .stage-image>img { width: 100%; height: auto; }
-.stage-table { border-top: 1px solid #949494; }
+.stage-table { border-top: 1px solid #565656; }
 .stage-table th { padding-right: 1rem; font-weight: bold; }
 #content-contacts { margin-top: 50px; text-align: center; }
 .contacts-header { margin: 20px 0; font-size: .8rem; font-weight: bold; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; color: #3757a1; text-transform: uppercase; }
