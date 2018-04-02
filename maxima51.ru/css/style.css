@@ -147,9 +147,10 @@ h2, h3 {font-weight: normal;}
 #content-gallery {margin-top: 35px;}
 .cg-imagelist { display: flex; font-size: 0; overflow-x: scroll; flex-wrap: nowrap;}
 .cg-imagelist-column { display: flex;flex-wrap: nowrap;}
-.cg-imagebox {position: relative;}
+.cg-imagebox {position: relative; margin-right: 1rem;}
 .cg-imagebox:hover .-zoom {opacity: 1;}
 @media (min-width:520px) {
+  .cg-imagebox {margin: 0;}
   .cg-imagelist-column {flex-wrap: wrap;}
   #content-gallery {margin-top: 50px;}
   .cg-imagelist {overflow: auto;}
