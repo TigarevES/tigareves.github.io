@@ -99,7 +99,8 @@ h2, h3 {font-weight: normal;}
 @media (min-width: 520px) {
   .-table-cell-caption {display: inline;}
 }
-.-image-big {width: 470px; height: 470px;}
+@media (max-width: 519px) {.-image-big {width: 235px; height: 235px;}}
+@media (min-width: 519px) {.-image-big {width: 470px; height: 470px;}}
 .-image-medium {width: 470px; height: 235px;}
 .-image-small {width: 235px; height: 235px;}
 
@@ -144,12 +145,14 @@ h2, h3 {font-weight: normal;}
 }
 
 #content-gallery {margin-top: 35px;}
-.cg-imagelist { display: flex; font-size: 0; overflow-x: auto; flex-wrap: nowrap;}
-.cg-imagelist-column { display: flex;flex-wrap: wrap;}
+.cg-imagelist { display: flex; font-size: 0; overflow-x: scroll; flex-wrap: nowrap;}
+.cg-imagelist-column { display: flex;flex-wrap: nowrap;}
 .cg-imagebox {position: relative;}
 .cg-imagebox:hover .-zoom {opacity: 1;}
 @media (min-width:520px) {
+  .cg-imagelist-column {flex-wrap: wrap;}
   #content-gallery {margin-top: 50px;}
+  .cg-imagelist {overflow: auto;}
 }
 
 
@@ -161,7 +164,7 @@ h2, h3 {font-weight: normal;}
 .co-imagebox:hover .-zoom {opacity: 1;}
 .co-imagebox>img {width: 100%; height: auto;}
 .price-num { font-size: 38px; margin: 0; display: inline-block; font-weight: 300; font-family: 'Gabriela', serif; }
-.price-text { color: #565656; margin-right: auto;}
+.price-text { color: #565656; margin-right: auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
 .price-description { display: block; font-size: .8rem; }
 .co-hot { margin-top: 35px; max-width: 300px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
 .co-hot span { text-decoration: underline; }
