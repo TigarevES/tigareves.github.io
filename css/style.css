@@ -162,7 +162,7 @@ h2, h3 {font-weight: normal;}
 .co-imagebox>img {width: 100%; height: auto;}
 .price-num { font-size: 38px; margin: 0; display: inline-block; font-weight: 300; margin-right: auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
 .price-text { color: #565656; font-family: 'Gabriela', serif;}
-.price-description { display: block; font-size: .8rem; }
+.price-description { display: block; margin-right: auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
 .co-hot { margin-top: 35px; max-width: 300px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
 .co-hot span { text-decoration: underline; }
 .co-hot-author { margin: 25px 0; color: #565656; font-size: .9rem; font-style: italic; }
