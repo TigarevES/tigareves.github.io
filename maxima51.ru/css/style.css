@@ -158,15 +158,15 @@ h2, h3 {font-weight: normal;}
 
 #content-offer { display: flex; margin-top: 50px; flex-wrap: wrap;}
 .co-description { text-align: right; }
-.co-headline { font-size: 1.2rem; border-right: 3px solid #3757a1; padding-right: 1rem; max-width: 300px; font-weight: 500; line-height: 1; }
-.co-value { margin-top: 5px; display: flex; align-items: center; border-bottom: 3px solid rgba(0, 0, 0, .2);}
+.co-headline { font-size: 1.2rem; border-right: 3px solid #3757a1; padding-right: 1rem;font-weight: 500; line-height: 1; }
+.co-value { margin-top: 5px; display: flex; align-items: center; border-bottom: 3px solid rgba(0, 0, 0, .2); padding-bottom: 5px;}
 .co-imagebox { position: relative; display: block;}
 .co-imagebox:hover .-zoom {opacity: 1;}
 .co-imagebox>img {width: 100%; height: auto;}
 .price-num { font-size: 38px; margin: 0; display: inline-block; font-weight: 300; font-family: 'Gabriela', serif; }
 .price-text { color: #565656; margin-right: auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
 .price-description { display: block; font-size: .8rem; }
-.co-hot { margin-top: 35px; max-width: 300px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
+.co-hot { margin-top: 35px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
 .co-hot span { text-decoration: underline; }
 .co-hot-author { margin: 25px 0; color: #565656; font-size: .9rem; font-style: italic; }
 .co-floor { margin-bottom: 2rem; }
@@ -177,11 +177,12 @@ h2, h3 {font-weight: normal;}
 .co-table th { padding-right: 3rem; font-weight: bold; }
 @media (min-width: 520px) {
   #content-offer {flex-wrap: nowrap;}
+  .co-headline {max-width: 300px;}
   .co-floor {padding: 1rem; border-radius: 4px; border: 3px solid rgba(0, 0, 0, .1);  }
   .co-table th { padding-right: 1rem;}
   .co-description {min-width: 300px; margin-right: 75px;}
-  .co-value {margin-top: 25px; display: block; border: 0;}
-  .co-hot {margin-top: 50px;}
+  .co-value {margin-top: 25px; display: block; border: 0; padding-bottom: 0;}
+  .co-hot {margin-top: 50px; max-width: 300px;}
 }
 
 #content-contacts { margin-top: 50px; text-align: center; }
