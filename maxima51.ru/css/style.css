@@ -16,13 +16,13 @@ h2, h3 {font-weight: normal;}
 /*menu*/
 .menu { margin-top: 20px; height: 80px; background-color: rgba(192, 192, 192, 0.6); }
 .menu-list { padding-top: 20px; list-style-type: none; display: flex; align-items: center; }
-.menu-item:not(.menu-item.logo):hover {border-bottom: 2px solid #e31e24;}
+.menu-item:not(.logo):hover {border-bottom: 2px solid #e31e24;}
 .menu-item.logo { margin-right: auto; }
 .menu-logo>img { width: 100%; height: auto; }
-.menu-item:not(.menu-item.logo) { margin-left: 15px; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; height: 35px;}
+.menu-item:not(.logo) { margin-left: 15px; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; height: 35px;}
 .menu-link { line-height: 35px; color: #fff; text-decoration: none; }
 @media (max-width:810px) {
-  .menu-item:not(.menu-item.logo) { display: none; }
+  .menu-item:not(.logo) { display: none; }
 }
 
 /*languagers*/
