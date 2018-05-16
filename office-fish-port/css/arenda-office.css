@@ -1,0 +1,195 @@
+/*basic*/
+*, *:before, *:after { box-sizing: border-box; }
+body, ul, ol, h1, h2, h3 { margin: 0; padding: 0;}
+header, main, footer, nav, section { display: block; }
+body { font-family: 'Ubuntu', Arial, sans-serif; color: #4c4c4c; }
+p {color: #565656; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
+h2, h3 {font-weight: normal;}
+.container { max-width: 980px; width: 100%; margin: 0 auto; padding: 0 20px; }
+
+/*header*/
+#header { height: 300px; background-repeat: no-repeat; background-size: cover; background-image: url(../assets/images/header_bg.jpg); }
+@media (max-width:520px) {
+  #header { height: 75vw; }
+}
+
+/*menu*/
+.menu { margin-top: 20px; height: 80px; background-color: rgba(192, 192, 192, 0.6); }
+.menu-list { padding-top: 20px; list-style-type: none; display: flex; align-items: center; }
+.menu-item:not(.logo):hover {border-bottom: 2px solid #e31e24;}
+.menu-item.logo { margin-right: auto; }
+.menu-logo>img { width: 100%; height: auto; }
+.menu-item:not(.logo) { margin-left: 15px; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; height: 35px;}
+.menu-link { line-height: 35px; color: #fff; text-decoration: none; }
+@media (max-width:810px) {
+  .menu-item:not(.logo) { display: none; }
+}
+
+/*languagers*/
+#langs { display: flex; justify-content: flex-end; font-size: .9rem; }
+.langs-item { display: block; padding: 0 10px; line-height: 28px; height: 28px; text-transform: uppercase; color: #fff; text-decoration: none; background: rgba(192, 192, 192, 0.6); font-weight: 500; transition: color 200ms ease}
+.langs-item:not(.is-active):hover {color: #e31e24;}
+.langs-item.is-active { background: #e31e24; }
+
+/*phone*/
+.phone { display: flex; justify-content: flex-end; padding: 20px 0; }
+.phone-item { display: block; }
+.phone-number { padding: 8px; background-color: rgba(192, 192, 192, 0.6); }
+.phone-link { text-decoration: none; font-size: 1.6rem; color: #fff; display: block; font-weight: 500; line-height: 1.45; }
+.phone-icon { padding: 8px; background-color: rgba(192, 192, 192, 0.6); }
+.phone-icon>svg { color: #fff; display: inline-block; height: 4.5rem; width: 4.5rem; }
+@media (max-width:520px) {
+  .phone-link { font-size: 1rem; margin-right: 20px; }
+  .phone-icon>svg { height: 3rem; width: 3rem; }
+}
+
+/*breadcrumbs*/
+#breadcrumb { margin: 20px 0; display: flex; list-style-type: none; }
+.breadcrumb-item:not(:last-child):after { display: inline-block; content: '→'; margin: 0 8px; }
+.breadcrumb-link { text-decoration: none; font-size: .9rem; color: inherit; }
+.breadcrumb-link.is-active { color: #e31e24; }
+@media (max-width:520px) {
+  #breadcrumb { margin: 10px 0; }
+}
+
+
+
+/*footer*/
+#footer { background-repeat: no-repeat; background-size: cover; background-image: url(../assets/images/footer_bg.jpg); }
+#footer>.menu { background-color: rgba(195, 195, 195, 0.8); }
+#footer .phone-number { background-color: transparent; }
+#footer .phone-icon { background-color: transparent; }
+
+/*contacts*/
+.contacts { padding: 30px 0; background-color: rgba(195, 195, 195, 0.8); }
+@media (max-width:520px) {
+  .contacts { padding: 0; }
+}
+.contacts-mails { padding: 20px 0; margin-right: auto; }
+@media (max-width:520px) {
+  .contacts-mails { padding: 0; }
+}
+.contacts-list { display: flex; }
+@media (max-width:520px) {
+  .contacts-list { flex-direction: column; }
+}
+.contacts-text { font-size: 1.1rem; padding: 12px 0; color: #fff; font-weight: 500; }
+@media (max-width:520px) {
+  .contacts-text { font-size: .9rem; }
+}
+.contacts-text>a { color: inherit; transition: 200ms ease;}
+.contacts-text>a:hover {text-decoration: none;}
+/*copyright*/
+.copyright { display: block; padding: 12px 0; background-color: rgba(195, 195, 195, 0.8); color: #fff; font-size: .9rem; }
+
+
+/** LIGHTBOX MARKUP **/
+
+
+
+/*.-components*/
+.-lightbox { display: none; position: fixed; z-index: 999; width: 100%; height: 100%; text-align: center; top: 0; left: 0; background: rgba(0, 0, 0, 0.8); }
+.-lightbox img { max-width: 100%; max-height: 100%; margin: auto; }
+.-lightbox:target { outline: none; display: flex; }
+.-zoom {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,.35); display: flex; opacity: 0; transition: opacity 100ms ease; margin: 1rem;}
+.-zoom>svg {height: 3rem; width: 3rem; margin: auto; color: #f0f0f0;}
+.-big-text {font-size: 24px; margin: 0; font-family: 'Gabriela', serif; line-height: 1;}
+.-small-text {margin-top: 10px; color: #565656; font-size: .8rem; line-height: 1; display: block; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
+.-table-cell-caption {display: none;}
+@media (min-width: 520px) {
+  .-table-cell-caption {display: inline;}
+}
+@media (max-width: 519px) {.-image-big {width: 235px; height: 235px;}}
+@media (min-width: 519px) {.-image-big {width: 470px; height: 470px;}}
+.-image-medium {width: 470px; height: 235px;}
+.-image-small {width: 235px; height: 235px;}
+
+/*content*/
+
+#content-about { display: flex; margin-top: 35px; }
+.ca-imagebox { border: 3px solid rgba(0, 0, 0, .1); border-radius: 4px; position: relative; display: none; }
+.ca-imagebox:hover .-zoom { opacity: 1; }
+.ca-image {padding: 0rem; max-width: 350px; height: auto; display: block; }
+.ca-headline { font-size: 1.2rem; border-left: 3px solid #3757a1; padding-left: 1rem; max-width: 350px; font-weight: 500; line-height: 1; }
+.ca-company { margin-top: 35px; margin-bottom: 1rem; font-family: 'Gabriela', serif; }
+.ca-body>p { font-size: .9rem; color: #565656; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+.ca-adress { font-size: .9rem; color: #565656; }
+.ca-more { color: #3757a1; }
+.ca-numbers { display: flex; margin-top: 2rem; }
+.ca-numbers-column { margin-right: 18px; }
+.ca-description { margin-left: 0px; }
+@media (min-width:520px) {
+  #content-about { margin-top: 50px; }
+  .ca-image { padding: 1rem; }
+  .ca-imagebox { display: block; }
+  .ca-description { margin-left: 75px; }
+  .ca-numbers-column { margin-right: 75px; }
+  .ca-numbers { margin-top: 4rem; }
+}
+
+
+#content-why { margin-top: 35px; }
+.cw-title, .cg-title { font-size: 1.2rem; border-left: 3px solid #3757a1; padding-left: 1rem; max-width: 50px; line-height: 1; font-weight: 500; margin: 35px 0; }
+.cw-box-list { display: flex; flex-wrap: wrap;}
+.cw-box-item { width:100%; border-top: 3px solid rgba(0, 0, 0, .1); border-radius: 0px; padding: 1rem; }
+.cw-box-header { position: relative; min-height: 40px;}
+.cw-box-header>svg {position: absolute; height: 2.5rem; width: 2.5rem; color: rgba(0, 0, 0, .2);}
+.cw-box-header>h3 {margin-left: 3.5rem; font-size: 1rem;}
+.cw-box-body>p {font-size: .8rem;}
+@media (min-width:520px) {
+  #content-why { margin-top: 50px; }
+  .cw-box-list {flex-wrap: nowrap;}
+  .cw-box-item { width:25%; border: 3px solid rgba(0, 0, 0, .1); border-radius: 4px; padding: 1rem; }
+  .cw-box-item:not(:last-child) { margin-right: 1rem; }
+  .cw-title, .cg-title {margin: 50px 0;}
+}
+
+#content-gallery {margin-top: 35px;}
+.cg-imagelist { display: flex; font-size: 0; overflow-x: scroll; flex-wrap: nowrap;}
+.cg-imagelist-column { display: flex;flex-wrap: nowrap;}
+.cg-imagebox {position: relative; margin-right: 1rem;}
+.cg-imagebox:hover .-zoom {opacity: 1;}
+@media (min-width:520px) {
+  .cg-imagebox {margin: 0;}
+  .cg-imagelist-column {flex-wrap: wrap;}
+  #content-gallery {margin-top: 50px;}
+  .cg-imagelist {overflow: auto;}
+}
+
+
+#content-offer { display: flex; margin-top: 50px; flex-wrap: wrap;}
+.co-description { text-align: right; }
+.co-headline { font-size: 1.2rem; border-right: 3px solid #3757a1; padding-right: 1rem;font-weight: 500; line-height: 1; }
+.co-value { margin-top: 5px; display: flex; align-items: center; border-bottom: 3px solid rgba(0, 0, 0, .2); padding-bottom: 5px;}
+.co-imagebox { position: relative; display: block;}
+.co-imagebox:hover .-zoom {opacity: 1;}
+.co-imagebox>img {width: 100%; height: auto;}
+.price-num { font-size: 2rem; margin: 0; display: inline-block; font-weight: 300; font-family: 'Gabriela', serif; }
+.price-text { color: #565656; margin-right: auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; margin-left: 4px;}
+.price-description { display: block; font-size: .8rem; }
+.co-hot { margin-top: 35px; font-size: 1rem; line-height: 1.2; font-family: 'Gabriela', serif; }
+.co-hot span { text-decoration: underline; }
+.co-hot-author { margin: 25px 0; color: #565656; font-size: .9rem; font-style: italic; }
+.co-floor { margin-bottom: 2rem; }
+.co-caption {font-size: 1rem; font-weight: bold;}
+.co-title { font-size: 1rem; margin-bottom: .5rem; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
+.co-image>img { width: 100%; height: auto; }
+.co-table { border-top: 3px solid rgba(0, 0, 0, .2); }
+.co-table th { padding-right: 3rem; font-weight: bold; }
+@media (min-width: 520px) {
+  #content-offer {flex-wrap: nowrap;}
+  .co-headline {max-width: 300px;}
+  .co-floor {padding: 1rem; border-radius: 4px; border: 3px solid rgba(0, 0, 0, .1);  }
+  .co-table th { padding-right: 1rem;}
+  .co-description {min-width: 300px; margin-right: 75px;}
+  .co-value {margin-top: 25px; display: block; border: 0; padding-bottom: 0;}
+  .co-hot {margin-top: 50px; max-width: 300px;}
+}
+
+#content-contacts { margin-top: 50px; text-align: center; }
+.cc-header { margin: 20px 0; font-size: .8rem; font-weight: bold; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; color: #3757a1; text-transform: uppercase; }
+.cc-phone { font-size: 1.5rem; line-height: 1; font-family: 'Gabriela', serif; }
+.cc-mail { padding: 20px 0; max-width: 500px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+@media (min-width: 520px) {
+  .cc-phone { font-size: 2.5rem;}
+}
